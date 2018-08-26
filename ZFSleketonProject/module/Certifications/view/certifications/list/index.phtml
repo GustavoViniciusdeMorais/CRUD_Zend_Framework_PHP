@@ -1,0 +1,30 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Cliente
+ * Date: 23/08/2018
+ * Time: 14:56
+ */
+?>
+<!-- Filename: module/Blog/view/blog/list/index.phtml -->
+<h1><span class="zf-green">Certifications</span></h1>
+
+<div class="list-group">
+<?php foreach ($this->certifications as $certification): ?>
+    <div class="list-group-item">
+        <h4 class="list-group-item-heading">
+            <a href="<?= $this->url('certifications/detail', ['id' => $certification->getId()]) ?>">
+                <?= $certification->getTitle() ?>
+            </a>
+        </h4>
+
+        <div class="btn-group" role="group" aria-label="Post actions">
+            <a class="btn btn-xs btn-default" href="<?= $this->url('certifications/edit', ['id' => $certification->getId()]) ?>">Edit</a>
+            <a class="btn btn-xs btn-danger" href="<?= $this->url('certifications/delete', ['id' => $certification->getId()]) ?>">Delete</a>
+        </div>
+    </div>
+<?php endforeach ?>
+</div>
+<div class="btn-group" role="group" aria-label="Certifications">
+    <a class="btn btn-primary" href="<?= $this->url('certifications/add') ?>">Add new certification</a>
+</div>

@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Cliente
+ * Date: 25/08/2018
+ * Time: 14:12
+ */
+?>
+
+<h1>Delete Certification</h1>
+
+<p>Are you sure you want to delete the following Certification?</p>
+
+<ul class="list-group">
+    <li class="list-group-item"><?= $this->escapeHtml($this->certification->getTitle()) ?></li>
+</ul>
+
+<form action="<?php $this->url('certifications/delete', [], true) ?>" method="post">
+    <input type="hidden" name="id" value="<?= $this->escapeHtmlAttr($this->certification->getId()) ?>" />
+    <input type="hidden" name="id" value="<?= $this->escapeHtmlAttr($this->certification->getId()) ?>" />
+    <input class="btn btn-default" type="submit" name="confirm" value="Cancel" />
+    <input class="btn btn-danger" type="submit" name="confirm" value="Delete" />
+</form>

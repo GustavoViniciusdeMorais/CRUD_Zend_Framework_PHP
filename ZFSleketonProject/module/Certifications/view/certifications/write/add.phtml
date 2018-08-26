@@ -1,0 +1,14 @@
+<!-- Filename: module/Certifications/view/certifications/write/add.phtml -->
+
+<h1>Add a Certification</h1>
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url());
+
+//$fieldset = $form->get('certification');
+
+echo $this->partial('certifications/write/form', [
+    'form' => $form,
+    'submitLabel' => 'Insert new Certification',
+]);

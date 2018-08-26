@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Cliente
+ * Date: 24/08/2018
+ * Time: 14:26
+ */
+?>
+<h1>Certificatoin Details</h1>
+
+<dl>
+    <dt>Certificatoin Title</dt>
+    <dd><?= $this->escapeHtml($this->certification->getTitle()) ?></dd>
+
+    <dt>Certificatoin Text</dt>
+    <dd><?= $this->escapeHtml($this->certification->getText()) ?></dd>
+</dl>
